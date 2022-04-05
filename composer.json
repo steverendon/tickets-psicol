@@ -1,0 +1,16 @@
+{
+    "name": "steven/tickets",
+    "description": "Reto tecnico para la empresa psicol",
+    "autoload": {
+        "psr-4": {
+            "Steven\\Tickets\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Steven Rendon",
+            "email": "deynerware@gmail.com"
+        }
+    ],
+    "require": {}
+}
