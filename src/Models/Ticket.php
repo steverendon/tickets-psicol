@@ -6,9 +6,16 @@ class Ticket extends Model
 {
     public function all()
     {
-        $sentence = $this->conn->query('SELECT * FROM tickets');
+        $sentence = $this->conn->query('SELECT * FROM tickets LIMIT 1');
         $sentence->execute();
 
-        return $sentence->fetch();
+        return $sentence;
+    }
+
+    public function availability()
+    {
+        $availables = $this->all()->fetch();
+
+        return $availables['number'];
     }
 }

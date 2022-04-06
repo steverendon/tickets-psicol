@@ -29,7 +29,6 @@ DROP TABLE IF EXISTS assignments;
 CREATE TABLE assignments(
     id INT UNSIGNED AUTO_INCREMENT,
     buyer_id INT UNSIGNED NOT NULL,
-    ticket_id INT UNSIGNED NOT NULL,
     number INT,
     PRIMARY KEY(id)
 );
