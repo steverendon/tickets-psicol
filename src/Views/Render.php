@@ -18,7 +18,13 @@ class Render
             $$key = $value;
         }
 
-        include $path;
+        ob_start();
+
+        require $path;
+
+        $templateContent = ob_get_clean();
+
+        require __DIR__ . '/../../views/layout.php';
     }
 
 }

@@ -21,7 +21,7 @@ class HomeController
         $tickets = new Ticket();
 
 
-        return $this->render->show('layout', [
+        return $this->render->show('home', [
             'buyers' => $buyers->all(),
             'tickets' => $tickets->all()->fetch(),
         ]);
