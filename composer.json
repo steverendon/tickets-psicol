@@ -4,7 +4,10 @@
     "autoload": {
         "psr-4": {
             "Steven\\Tickets\\": "src/"
-        }
+        },
+        "files": [
+            "helpers/database.php"
+        ]
     },
     "authors": [
         {
