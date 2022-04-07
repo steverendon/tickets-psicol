@@ -20,7 +20,7 @@ DROP TABLE IF EXISTS tickets;
 
 CREATE TABLE tickets(
     id INT UNSIGNED AUTO_INCREMENT,
-    number VARCHAR(255) NOT NULL,
+    number INT NOT NULL,
     PRIMARY KEY(id)
 );
 
@@ -32,3 +32,5 @@ CREATE TABLE assignments(
     number INT,
     PRIMARY KEY(id)
 );
+
+INSERT INTO tickets (number) VALUES (50);
