@@ -1,5 +1,4 @@
 <div class="row">
-        <!-- add new client -->
         <div class="col-lg-3">
             <div class="card mt-2">
                 <h5 class="card-header">Agregar un Comprador</h5>
@@ -50,7 +49,6 @@
                 </div>
             </div>
         </div>
-        <!-- add new client -->
         <div class="col-lg-9">
             <div class="card mt-2">
                 <h5 class="card-header text-center">Compradores Registrados</h5>
@@ -66,7 +64,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php while($buyer = $buyers->fetch()) { ?>
+                            <?php while($buyer = $buyers->fetch()): ?>
                                 <tr>
                                     <td>
                                         <a href=<?php echo "index.php?controller=Buyer&action=destroy&id=".$buyer['id'] ?> class="link-danger mx-2">Eliminar</a>
@@ -77,7 +75,7 @@
                                     <td><?php echo $buyer['email'] ?></td>
                                     <td><?php echo $buyer['phone'] ?></td>
                                 </tr>
-                            <?php } ?>
+                            <?php endwhile ?>
                         </tbody>
                     </table>
                 </div>

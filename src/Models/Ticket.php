@@ -18,4 +18,14 @@ class Ticket extends Model
 
         return $availables['number'];
     }
+
+    public function update(array $data)
+    {
+        $number = $this->availability() + $data['number'];
+
+        $sentence = $this->conn->prepare('UPDATE tickets SET number = ?');
+        $sentence->bindParam(1, $number);
+
+        $sentence->execute();
+    }
 }

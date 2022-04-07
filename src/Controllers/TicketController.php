@@ -3,31 +3,21 @@
 namespace Steven\Tickets\Controllers;
 
 use Steven\Tickets\Models\Buyer;
+use Steven\Tickets\Models\Ticket;
 use Steven\Tickets\Views\Render;
 
 class TicketController
 {
-    private $render;
-    protected $buyer;
+    protected $ticket;
 
     public function __construct()
     {
-        $this->render = new Render();
-        $this->buyer = new Buyer;
+        $this->ticket = new Ticket;
     }
 
-    public function index()
+    public function update(array $data)
     {
-        $buyer = new Buyer();
-        
-        $this->render->show('buyer', [
-            'buyers' => $buyer->all(),
-        ]);
-    }
-
-    public function store(array $data)
-    {
-        $this->buyer->create($data);
+        $this->ticket->update($data);
 
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
